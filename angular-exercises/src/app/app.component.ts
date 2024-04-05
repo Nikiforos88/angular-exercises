@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { ExeroneComponent } from './components/exerone/exerone.component';
+import { InputComponent } from './components/input/input.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ExeroneComponent],
+  imports: [InputComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
