@@ -11,6 +11,8 @@ import { OddLengthWordsComponent } from '../odd-length-words/odd-length-words.co
 })
 export class InputComponent {
   value: string = '';
+  oddValue: string = '';
+  evenValue: string = '';
   userInput: string = '';
 
   submit() {
@@ -24,6 +26,13 @@ export class InputComponent {
 
   onUserInput(event: Event) {
     this.value= (event.target as HTMLInputElement).value;
+    if ( this.value.length % 2 === 0 ) {
+      this.evenValue = this.value;
+      this.oddValue = " ";
+    } else {
+      this.oddValue = this.value
+      this.evenValue = " ";
+    }
     this.userInput = this.value;
   }
 }

@@ -1,1 +1,10 @@
-<h6>No odd lengths words</h6>
+<div class="d-flex flex-column">
+    @if(!receivedValue) {
+        <span class="text">No odd lengths words</span>
+    } @else {
+        <span class="text-danger p-2 text-truncate">
+            {{ receivedValue }}
+        </span>
+        <span class="text">No odd lengths words</span>
+    }
+</div>
