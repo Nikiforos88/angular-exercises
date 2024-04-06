@@ -18,9 +18,8 @@ export class InputComponent {
   userInput: string = '';
   
   submit() {
-    console.log('clicked')
     if (this.value.length % 2 === 0) {
-      this.evenData =this.value;
+      this.evenData = this.value;
     } else {
       this.oddData = this.value;
     }
