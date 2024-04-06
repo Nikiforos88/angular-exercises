@@ -9,4 +9,5 @@ import { Component, Input } from '@angular/core';
 })
 export class EvenLengthWordsComponent {
   @Input() receivedValue: string = '';
+  @Input() evenValue: string = '';
 }

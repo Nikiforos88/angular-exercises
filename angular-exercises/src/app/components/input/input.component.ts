@@ -13,17 +13,19 @@ export class InputComponent {
   value: string = '';
   oddValue: string = '';
   evenValue: string = '';
+  oddData: string = '';
+  evenData: string = '';
   userInput: string = '';
-
+  
   submit() {
-    if ( this.value.length % 2 === 0 ) {
-      console.log('odd')
+    console.log('clicked')
+    if (this.value.length % 2 === 0) {
+      this.evenData =this.value;
     } else {
-      console.log('even')
+      this.oddData = this.value;
     }
-    this.value = '';
   }
-
+    
   onUserInput(event: Event) {
     this.value= (event.target as HTMLInputElement).value;
     if ( this.value.length % 2 === 0 ) {

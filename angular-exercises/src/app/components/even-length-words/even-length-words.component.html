@@ -1,10 +1,10 @@
 <div class="d-flex flex-column">
-    @if(!receivedValue) {
+    <span class="text-danger text-truncate">
+        {{ receivedValue }}
+    </span>
+    @if(evenValue === '') {
         <span class="text">No even lengths words</span>
     } @else {
-        <span class="text-danger text-truncate">
-            {{ receivedValue }}
-        </span>
-        <span class="text">No even lengths words</span>
+        {{ evenValue }}
     }
 </div>
