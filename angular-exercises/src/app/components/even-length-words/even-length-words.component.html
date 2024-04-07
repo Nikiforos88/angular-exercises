@@ -2,9 +2,15 @@
     <span class="text-danger text-truncate">
         {{ receivedValue }}
     </span>
-    @if(evenValue === '') {
+    @if(evenData.length === 0 ) {
         <span class="text">No even lengths words</span>
     } @else {
-        {{ evenValue }}
+        @for(entry of evenData; track entry ) {
+            <div class="row">
+                <div class="col">
+                    <div>{{ entry }}</div>
+                </div>
+            </div>
+        }
     }
 </div>

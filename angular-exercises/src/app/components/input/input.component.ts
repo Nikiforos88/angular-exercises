@@ -13,15 +13,15 @@ export class InputComponent {
   value: string = '';
   oddValue: string = '';
   evenValue: string = '';
-  oddData: string = '';
-  evenData: string = '';
+  oddData: string[] = [];
+  evenData: string[] = [];
   userInput: string = '';
   
   submit() {
     if (this.value.length % 2 === 0) {
-      this.evenData = this.value;
+      this.evenData.push(this.value);
     } else {
-      this.oddData = this.value;
+      this.oddData.push(this.value);
     }
   }
     

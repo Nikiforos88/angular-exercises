@@ -2,9 +2,15 @@
     <span class="text-danger text-truncate">
         {{ receivedValue }}
     </span>
-    @if(oddValue === '') {
+    @if(oddData.length === 0 ) {
         <span class="text">No odd lengths words</span>
     } @else {
-        {{ oddValue }}
+        @for(entry of oddData; track entry ) {
+            <div class="row">
+                <div class="col">
+                    <div>{{ entry }}</div>
+                </div>
+            </div>
+        }
     }
 </div>
